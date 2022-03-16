@@ -5,6 +5,8 @@ window.title("Калькулятор \U0001F9E0")
 window.resizable(width=False, height=False)
 
 # --------------------------------------------------
+user_input = tk.StringVar()
+expression = ""
 
 
 def clear():
@@ -15,8 +17,12 @@ def clear():
 
 def bt_equal():
     global expression
-    result = str(eval(expression))  # 'eval':This function is used to evaluates the string expression directly
-    user_input.set(result)
+    try:
+        result = str(eval(expression))  # 'eval':This function is used to evaluates the string expression directly
+        user_input.set(result)
+    except ZeroDivisionError:
+        expression = "\U000026D4Ділення на 0"
+        user_input.set(expression)
 
 
 def btn_click(item):
@@ -25,8 +31,6 @@ def btn_click(item):
     user_input.set(expression)
 
 
-user_input = tk.StringVar()
-expression = ""
 # --------------------------------------------------
 
 frame_result = tk.Frame(window, relief=tk.SUNKEN, borderwidth=5)
