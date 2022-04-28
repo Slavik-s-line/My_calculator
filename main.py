@@ -1,7 +1,7 @@
 import tkinter as tk
 
 window = tk.Tk()
-window.title("Калькулятор \U0001F9E0")
+window.title("Calculator \U0001F9E0")
 window.resizable(width=False, height=False)
 
 # --------------------------------------------------
@@ -54,49 +54,33 @@ btn_4 = tk.Button(frame_btns_1, text="/", command=lambda: btn_click("/"))
 btn_4.pack(side=tk.LEFT)
 
 # --------------------------------------------------
+list2 = ["7", "8", "9", "*"]
 
 frame_btns_2 = tk.Frame(window)
 frame_btns_2.pack()
 
-btn_1 = tk.Button(frame_btns_2, text="7", command=lambda: btn_click("7"))
-btn_1.pack(side=tk.LEFT)
-btn_2 = tk.Button(frame_btns_2, text="8", command=lambda: btn_click("8"))
-btn_2.pack(side=tk.LEFT)
-btn_3 = tk.Button(frame_btns_2, text="9", command=lambda: btn_click("9"))
-btn_3.pack(side=tk.LEFT)
-btn_4 = tk.Button(frame_btns_2, text="*", command=lambda: btn_click("*"))
-btn_4.pack(side=tk.LEFT)
+for i in range(4):
+    tk.Button(frame_btns_2, text=list2[i], command=lambda i=i: btn_click(list2[i])).pack(side=tk.LEFT)
 
 # --------------------------------------------------
+list3 = ["4", "5", "6", "-"]
 
 frame_btns_3 = tk.Frame(window)
 frame_btns_3.pack()
 
-btn_1 = tk.Button(frame_btns_3, text="4", command=lambda: btn_click("4"))
-btn_1.pack(side=tk.LEFT)
-btn_2 = tk.Button(frame_btns_3, text="5", command=lambda: btn_click("5"))
-btn_2.pack(side=tk.LEFT)
-btn_3 = tk.Button(frame_btns_3, text="6", command=lambda: btn_click("6"))
-btn_3.pack(side=tk.LEFT)
-btn_4 = tk.Button(frame_btns_3, text="-", command=lambda: btn_click("-"))
-btn_4.pack(side=tk.LEFT)
+for i in range(4):
+    tk.Button(frame_btns_3, text=list3[i], command=lambda i=i: btn_click(list3[i])).pack(side=tk.LEFT)
 
 # --------------------------------------------------
+list4 = ["1", "2", "3", "+"]
 
 frame_btns_4 = tk.Frame(window)
 frame_btns_4.pack()
 
-btn_1 = tk.Button(frame_btns_4, text="1", command=lambda: btn_click("1"))
-btn_1.pack(side=tk.LEFT)
-btn_2 = tk.Button(frame_btns_4, text="2", command=lambda: btn_click("2"))
-btn_2.pack(side=tk.LEFT)
-btn_3 = tk.Button(frame_btns_4, text="3", command=lambda: btn_click("3"))
-btn_3.pack(side=tk.LEFT)
-btn_4 = tk.Button(frame_btns_4, text="+", command=lambda: btn_click("+"))
-btn_4.pack(side=tk.LEFT)
+for i in range(4):
+    tk.Button(frame_btns_4, text=list4[i], command=lambda i=i: btn_click(list4[i])).pack(side=tk.LEFT)
 
 # --------------------------------------------------
-
 frame_btns_5 = tk.Frame(window)
 frame_btns_5.pack()
 
